@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="icon" href="./img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+<link rel="stylesheet" href="./STYLE.CSS">
+
+
+    <style>
+
+
+
+
+    </style>
+</head>
+<body>
+   <div class="log">
+    <a href="./INDEX.HTML" class="log"><img src="./—Pngtree—letter m logo_6109638.png" alt="" width="120px" /></a>
+   </div>
+    
+
+
+    </div>
+<!--magical wall section-->
+<div class="gallery">
+
+    <ul class="controls">
+        <li class="buttons active" data-filter="all">front-end</li>
+        <li class="buttons" data-filter="foundation">back-end</li>
+        <li class="buttons" data-filter="concellar">JavaScript</li>
+        <li class="buttons" data-filter="bbb">saas</li>
+        <li class="buttons" data-filter="Primer">react</li>
+        <li class="buttons" data-filter="mascara">angular</li>
+        <li class="buttons" data-filter="pak">php</li>
+    </ul>
+
+    <div class="image-container">
+
+        <a href="./imgs/1.jpeg" class="image foundation">
+            <img src="./imgs/2.jpeg" alt="">
+        </a>
+        <a href="./imgs/22.jpeg" class="image foundation">
+            <img src="./imgs/3.jpeg" alt="">
+         
+        </a>
+        <a href="./imgs/4.jpeg" class="image foundation">
+            <img src="./imgs/5.jpeg" alt="">
+        </a>
+
+        <a href="./imgs/6.jpeg" class="image concellar">
+            <img src="./imgs/7.avif" alt="">
+        </a>
+        <a href="./imgs/8.jpeg" class="image concellar">
+            <img src="./imgs/9.jpeg" alt="">
+        </a>
+        <a href="./imgs/1.jpeg" class="image concellar">
+            <img src="./imgs/22.jpeg" alt="">
+        </a>
+
+        <a href="./imgs/7.avif" class="image bbb">
+            <img src="./imgs/2.jpeg" alt="">
+        </a>
+        <a href="./imgs/5.jpeg" class="image bbb">
+            <img src="./imgs/6.jpeg" alt="">
+        </a>
+        <a href="./imgs/8.jpeg" class="image bbb">
+            <img src="./imgs/`10.jpeg" alt="">
+        </a>
+        <a href="./imgs/9.jpeg" class="image bbb">
+            <img src="./imgs/22.jpeg" alt="">
+        </a>
+        <a href="./imgs/2.jpeg" class="image bbb">
+            <img src="./imgs/3.jpeg" alt="">
+        </a>
+
+        <a href="./imgs/1.jpeg" class="image Primer">
+            <img src="./imgs/4.jpeg" alt="">
+        </a>
+        <a href="./imgs/5.jpeg class="image Primer">
+            <img src="./imgs/8.jpeg" alt="">
+        </a>
+        <a href="./imgs/2.jpeg" class="image Primer">
+            <img src="./imgs/5.jpeg" alt="">
+        </a>
+
+        <a href="./imgs/6.jpeg" class="image mascara">
+            <img src="./imgs/7.avif" alt="">
+        </a>
+        <a href="./imgs/22.jpeg" class="image mascara">
+            <img src="./imgs/22.jpeg" alt="">
+        </a>
+        <a href="./imgs/22.jpeg" class="image sandwich">
+            <img src="./imgs/2.jpeg" alt="">
+        </a>
+        <a href="./imgs/6.jpeg" class="image mascara">
+            <img src="./imgs/`10.jpeg" alt="">
+        </a>
+
+      
+              </div>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+
+$(document).ready(function(){
+
+    $('.buttons').click(function(){
+
+         $(this).addClass('active').siblings().removeClass('active');
+
+        var filter = $(this).attr('data-filter')
+
+        if(filter == 'all'){
+            $('.image').show(400);
+        }else{
+            $('.image').not('.'+filter).hide(200);
+            $('.image').filter('.'+filter).show(400);
+        }
+
+    });
+
+     $('.gallery').magnificPopup({
+
+       delegate:'a',
+        type:'image',
+        gallery:{
+           enabled:true
+         }
+
+    });
+
+});
+
+
+
+</script>
+</body>
+</html>
